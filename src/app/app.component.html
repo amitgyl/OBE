@@ -1,3 +1,570 @@
-<h1>
-  {{title}}
-</h1>
+<div class="wrapper">
+    <div class="header">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                    <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo.png" alt="Roomer" title="Roomer" width=255 height=24 /></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">HOTEL</a></li>
+                        <li><a href="#">ROOMS</a></li>
+                        <li><a href="#">BAR & LOUNGE</a></li>
+                        <li><a href="#">FITNESS</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li class="#">
+                            <a href="#" class="dropdown-toggle country-selector" data-toggle="dropdown"><img src="assets/img/netherlands-flag.png" /><b class="caret dropdown-btn"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#"><img src="assets/img/netherlands-flag.png" /></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="#">
+                            <a href="#" class="dropdown-toggle currency-selector" data-toggle="dropdown"><span class="fontA header-currency-btn">&#xf155;</span><b class="caret dropdown-btn"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="badge"> $ </span></a></li>
+                                <li><a href="#"><span class="badge"> &euro; </span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="steps">
+                <div class="row">
+                    <div class="step-item col-xs-3 step-active">
+                        <div class="step-1">
+                            <span class="step-no"><span class="step-no-inner">1</span></span>
+                            <span class="step-lbl"> Select Date </span>
+                        </div>
+                    </div>
+                    <div class="step-item col-xs-3">
+                        <div class="step-2">
+                            <span class="step-no"><span class="step-no-inner">2</span></span>
+                            <span class="step-lbl"> Rooms </span>
+                        </div>
+                    </div>
+                    <div class="step-item col-xs-3">
+                        <div class="step-3">
+                            <span class="step-no"><span class="step-no-inner">3</span></span>
+                            <span class="step-lbl"> Extras </span>
+                        </div>
+                    </div>
+                    <div class="step-item col-xs-3">
+                        <div class="step-4">
+                            <span class="step-no"><span class="step-no-inner">4</span></span>
+                            <span class="step-lbl"> Details </span>
+                        </div>
+                    </div>
+                    <div class="mob-only col-md-12 text-center">
+                        <span class="current-step">Select Date</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="options">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span class="panel-title">Your Stay Dates</span>
+                                </div>
+                                <div class="dynamic-form">
+                                    <div class="show-480 dyna-form row">
+                                        <div class="mobile-field">
+                                            <div class="mobile-field-label">Arrival</div>
+                                            <div class="mobile-field-input"><button class="transparent-btn">Fri, March 19, 2017</button></div>
+                                        </div>
+                                        <div class="mobile-field">
+                                            <div class="mobile-field-label">Departure</div>
+                                            <div class="mobile-field-input"><button class="transparent-btn">Fri, March 23, 2017</button></div>
+                                        </div>
+                                        <div class="mobile-field">
+                                            <div class="mobile-field-label">Nights</div>
+                                            <div class="mobile-field-input"><button class="transparent-btn">-</button><input class="count-field" type="text"
+                                                    value="3"><button class="transparent-btn">+</button></div>
+                                        </div>
+                                        <div class="mobile-field">
+                                            <div class="mobile-field-label">Guest</div>
+                                            <div class="mobile-field-input"><button class="transparent-btn">-</button><input class="count-field" type="text"
+                                                    value="3"><button class="transparent-btn">+</button></div>
+                                        </div>
+                                        <div class="mobile-field">
+                                            <div class="mobile-field-label">Rooms</div>
+                                            <div class="mobile-field-input"><button class="transparent-btn">-</button><input class="count-field" type="text"
+                                                    value="3"><button class="transparent-btn">+</button></div>
+                                        </div>
+                                        <!--<div class="mob-field">
+                                                
+                                                        <label class="pull-left field-label">Arrival</label>
+                                                        <button class="pull-right btn btn-default">Fri, March 19, 2017</button>
+                                                    </div>
+                                                    <div class="mob-field">
+                                                        <label class="pull-left field-label">Departure</label>
+                                                        <button class="pull-right btn btn-default">Fri, March 23, 2017</button>
+                                                    </div>
+                                                    <div class="mob-field">
+                                                        <label class="pull-left field-label">Nights</label>
+                                                        <span class="pull-right mob-field-form">
+                                                            <button class="btn"> + </button>
+                                                            <input type="text" style="width:50px">
+                                                            <button class="btn"> - </button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="mob-field">
+                                                        <label class="pull-left field-label">Guests</label>
+                                                        <span class="pull-right mob-field-form">
+                                                            <button class="btn"> + </button>
+                                                            <input type="text" style="width:50px">
+                                                            <button class="btn"> - </button>
+                                                        </span>
+                                                    </div>
+                                                    <div class="mob-field">
+                                                        <label class="pull-left field-label">Rooms</label>
+                                                        <span class="pull-right mob-field-form">
+                                                            <button class="btn"> + </button>
+                                                            <input type="text" style="width:50px">
+                                                            <button class="btn"> - </button>
+                                                        </span>
+                                                    </div>-->
+                                    </div>
+                                    <div class="schedule hide-480">
+                                        <div class="form-group">
+                                            <label class="control-label">Arrival Date</label>
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control date">
+                                                <button type="button" class="date-btn btn btn-default fontA">&#xf073;</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-inline">
+                                                <input type="number" class="form-control night-no">
+                                                <span class="control-label">Nights</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Departure Date</label>
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control date">
+                                                <button type="button" class="date-btn btn btn-default fontA">&#xf073;</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="room-details hide-480">
+                                        <label class="control-label">Rooms and Guests</label>
+                                        <div class="form-group">
+                                            <div class="form-inline">
+                                                <span class="control-label room">Rooms</span>
+                                                <select class="form-control">
+                                                                <option> 1 </option>
+                                                                <option> 2 </option>
+                                                                <option> 3 </option>
+                                                                <option> 4 </option>
+                                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-inline">
+                                                <span class="control-label room">Guests</span>
+                                                <select class="form-control">
+                                                                <option> 1 </option>
+                                                                <option> 2 </option>
+                                                                <option> 3 </option>
+                                                                <option> 4 </option>
+                                                            </select>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="form-group">
+                                                        <div class="form-inline">
+                                                            <span class="control-label room">Room 2 Guests</span>
+                                                            <select class="form-control">
+                                                                <option> 2 </option>
+                                                            </select>
+                                                        </div>
+                                                    </div> -->
+                                    </div>
+                                    <div class="form-group promotion-code">
+                                        <span class="control-label">Promotion Code</span>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="blue-btn"> Apply Promotion </button>
+                                    </div>
+                                    <div class="cancel-btn">
+                                        <a href="#">
+                                            <span class="cancel fontA">
+                                    			&#xf057;
+                                    		</span>Cancel Reservation
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="display main-content">
+                            <div class="display-legend">
+                                <span class="legend">
+                                            <span class="legend-box r-a"></span>
+                                <small class="legend-label">Room Available</small>
+                                </span>
+                                <span class="legend">
+                                            <span class="legend-box s-d"></span>
+                                <small class="legend-label">Selected Date</small>
+                                </span>
+                                <span class="legend">
+                                            <span class="legend-box n-a"></span>
+                                <small class="legend-label">Not Available</small>
+                                </span>
+                            </div>
+                            <div class="display-calendar">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <table class="calendar-1 table table responsive">
+                                            <thead>
+                                                <th colspan="7"><span class="pull-left fontA">&#xf137;</span><span class="show-991 pull-right fontA">&#xf138;</span>
+                                                    <div
+                                                        class="text-center">March 2017</div>
+                                    </th>
+                                    </thead>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center"><strong>S</strong></div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center"><strong>M</strong></div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center"><strong>T</strong></div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center"><strong>W</strong></div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center"><strong>T</strong></div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center"><strong>F</strong></div>
+                                        </td>
+                                        <td>
+                                            <div class="text-center"><strong>S</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="disabled"></td>
+                                        <td class="disabled"></td>
+                                        <td class="disabled"></td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>1</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>2</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>3</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>4</small></span></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>5</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>6</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>7</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>8</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>9</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>10</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>11</small></span></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>12</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>13</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>14</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>15</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>16</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>17</small></span></div>
+                                        </td>
+                                        <td class="disabled">
+                                            <div class="am"><span class="pull-right"><small>18</small></span></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="s-d arrival">
+                                            <div class="am"><span class="pull-right"><small>19</small></span></div>
+                                            <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="s-d">
+                                            <div class="am"><span class="pull-right"><small>20</small></span></div>
+                                            <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="s-d">
+                                            <div class="am"><span class="pull-right"><small>21</small></span></div>
+                                            <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="s-d">
+                                            <div class="am"><span class="pull-right"><small>22</small></span></div>
+                                            <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="s-d departure">
+                                            <div class="am"><span class="pull-right"><small>23</small></span></div>
+                                            <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>24</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>25</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>26</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>27</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>28</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>29</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>30</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                        <td class="r-a">
+                                            <div class="am"><span class="pull-right"><small>31</small></span></div>
+                                            <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table class="calendar-2 table table responsive hide-991">
+                                        <thead>
+                                            <th colspan="7"><span class="pull-right fontA">&#xf138;</span>
+                                                <div class="text-center">April 2017</div>
+                                            </th>
+                                        </thead>
+                                        <tr>
+                                            <td>
+                                                <div class="text-center"><strong>S</strong></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-center"><strong>M</strong></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-center"><strong>T</strong></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-center"><strong>W</strong></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-center"><strong>T</strong></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-center"><strong>F</strong></div>
+                                            </td>
+                                            <td>
+                                                <div class="text-center"><strong>S</strong></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>1</small></span></div>
+                                                <div class="pm"><small>$200</small></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>2</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>3</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>4</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>5</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>6</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>7</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>8</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="not-available n-a">
+                                                <div class="am"><span class="pull-right"><small>9</small></span></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>10</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>11</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>12</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="not-available n-a">
+                                                <div class="am"><span class="pull-right"><small>13</small></span></div>
+                                            </td>
+                                            <td class="not-available n-a">
+                                                <div class="am"><span class="pull-right"><small>14</small></span></div>
+                                            </td>
+                                            <td class="not-available n-a">
+                                                <div class="am"><span class="pull-right"><small>15</small></span></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>16</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>17</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>18</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>19</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>20</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>21</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>22</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>23</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>24</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>25</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>26</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>27</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>28</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>29</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-a">
+                                                <div class="am"><span class="pull-right"><small>30</small></span></div>
+                                                <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="check-btn"><button class="blue-btn"> Check Availability <span class="fontA">&#xf054;</span> </button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="text-center">
+            Copyright 2017. Roomer. All rights reserved
+        </div>
+    </div>
+</div>
+</div>
