@@ -19,11 +19,11 @@
                                     <div class="col-md-6">
                                         <table class="calendar-1 table table responsive">
                                             <thead>
-                                                <th colspan="7"><span class="pull-left fontA">&#xf137;</span><span class="show-991 pull-right fontA">&#xf138;</span>
-                                                    <div class="text-center">March 2017</div>
+                                                <th colspan="7"><span class="pull-left fontA" (click) ="showPreviousMonth()">&#xf137;</span><span class="show-991 pull-right fontA">&#xf138;</span>
+                                                    <div class="text-center">{{month1}} {{year1}}</div>
                                                 </th>
                                             </thead>
-                                            <tr >
+                                            <tr>
                                                 <td>
                                                     <div class="text-center"><strong>S</strong></div>
                                                 </td>
@@ -170,8 +170,8 @@
                                     <div class="col-md-6">
                                         <table class="calendar-2 table table responsive hide-991">
                                             <thead>
-                                                <th colspan="7"><span class="pull-right fontA">&#xf138;</span>
-                                                    <div class="text-center">April 2017</div>
+                                                <th colspan="7"><span class="pull-right fontA" (click) ="showNextMonth()">&#xf138; </span>
+                                                    <div class="text-center">{{month2}} {{year2}}</div>
                                                 </th>
                                             </thead>
                                             <tr>
