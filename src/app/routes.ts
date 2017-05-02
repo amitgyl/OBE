@@ -1,8 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
+import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './topNav/top-nav/top-nav.component';
 import { LeftPanelComponent } from './leftPanel/left-panel/left-panel.component';
@@ -12,26 +8,12 @@ import { SelectDatesComponent } from './leftPanel/left-panel/stayDates/stay-date
 import { SpecifyRoomsAndGuestsComponent } from './leftPanel/left-panel/stayDates/stay-dates/specifyRoomsAndGuests/specify-rooms-and-guests/specify-rooms-and-guests.component';
 import { PromoCodeComponent } from './leftPanel/left-panel/stayDates/stay-dates/promoCode/promo-code/promo-code.component';
 import { CancelBookingComponent } from './leftPanel/left-panel/cancelBooking/cancel-booking/cancel-booking.component';
-import {RoomsAvailableService} from './shared/rooms-available.service';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    TopNavComponent,
-    LeftPanelComponent,
-    MainPanelComponent,
-    StayDatesComponent,
-    SelectDatesComponent,
-    SpecifyRoomsAndGuestsComponent,
-    PromoCodeComponent,
-    CancelBookingComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [RoomsAvailableService],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+export const appRoutes: Routes = [
+    // {path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent'] },
+    // {path: 'events', component: EventsListComponent, resolve: {events:EventsListResolverService}},
+    // {path: 'event/:id', component: EventDetailsComponent, canActivate:[EventRouteActivatorService]},
+    // {path: '404', component: Errror404Component},
+    // {path: '', redirectTo:'events', pathMatch: 'full'},
+    // {path: 'user', loadChildren: 'app/user/user.module#UserModule'}
+]
