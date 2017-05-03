@@ -17,7 +17,7 @@ export class RoomsAvailableService {
 
 
   getAvailibility(arrDate, depDate) {
-    console.log('in service', arrDate, depDate);
+    //console.log('in service', arrDate, depDate);
     if (arrDate === undefined) { arrDate = '2017-06-01'; }
     if (depDate === undefined) { depDate = '2017-08-01'; }
     // return Observable.of(API_MONTHS_RESPONSE);
@@ -30,7 +30,7 @@ const AVAILABILITY = {
       {
         "date": "5/1/2017",
         "availability": 5,
-        "max guests": 3,
+        "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
         "closedOnArrival": false,
@@ -41,8 +41,7 @@ const AVAILABILITY = {
         "minDays": 0,
         "singleUsePrice": 0,
         "stopSell": false
-      },
-      {
+      },{
         "date": "5/2/2017",
         "availability": 5,
         "max guests": 4,

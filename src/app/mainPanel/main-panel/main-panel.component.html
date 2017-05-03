@@ -46,7 +46,17 @@
                                                     <div class="text-center"><strong>S</strong></div>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <!--start of loop-->
+                                            <tr *ngFor="let a of arrWeeks;">                                        
+                                                <td class="r-a" *ngFor="let c of a;">
+                                                    <div class="am"><span class="pull-right"><small>{{c}}</small></span></div>
+                                                    <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                                </td>
+                                            </tr>                                                                                                                                    
+                                            <!--end of loop-->
+
+                                            <!--commented original section-->
+                                            <!--<tr>
                                                 <td class="disabled"></td>
                                                 <td class="disabled"></td>
                                                 <td class="disabled"></td>
@@ -62,84 +72,84 @@
                                                 <td class="disabled">
                                                     <div class="am"><span class="pull-right"><small>4</small></span></div>
                                                 </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>5</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>6</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>7</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>8</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>9</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>10</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>11</small></span></div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>12</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>13</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>14</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>15</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>16</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>17</small></span></div>
-                                                </td>
-                                                <td class="disabled">
-                                                    <div class="am"><span class="pull-right"><small>18</small></span></div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="s-d arrival">
-                                                    <div class="am"><span class="pull-right"><small>19</small></span></div>
-                                                    <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
-                                                </td>
-                                                <td class="s-d">
-                                                    <div class="am"><span class="pull-right"><small>20</small></span></div>
-                                                    <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
-                                                </td>
-                                                <td class="s-d">
-                                                    <div class="am"><span class="pull-right"><small>21</small></span></div>
-                                                    <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
-                                                </td>
-                                                <td class="s-d">
-                                                    <div class="am"><span class="pull-right"><small>22</small></span></div>
-                                                    <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
-                                                </td>
-                                                <td class="s-d departure">
-                                                    <div class="am"><span class="pull-right"><small>23</small></span></div>
-                                                    <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
-                                                </td>
-                                                <td class="r-a">
-                                                    <div class="am"><span class="pull-right"><small>24</small></span></div>
-                                                    <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
-                                                </td>
-                                                <td class="r-a">
-                                                    <div class="am"><span class="pull-right"><small>25</small></span></div>
-                                                    <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                </tr>
+                                                <tr>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>5</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>6</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>7</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>8</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>9</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>10</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>11</small></span></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>12</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>13</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>14</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>15</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>16</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>17</small></span></div>
+                                                    </td>
+                                                    <td class="disabled">
+                                                        <div class="am"><span class="pull-right"><small>18</small></span></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="s-d arrival">
+                                                        <div class="am"><span class="pull-right"><small>19</small></span></div>
+                                                        <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                                    </td>
+                                                    <td class="s-d">
+                                                        <div class="am"><span class="pull-right"><small>20</small></span></div>
+                                                        <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                                    </td>
+                                                    <td class="s-d">
+                                                        <div class="am"><span class="pull-right"><small>21</small></span></div>
+                                                        <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                                    </td>
+                                                    <td class="s-d">
+                                                        <div class="am"><span class="pull-right"><small>22</small></span></div>
+                                                        <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                                    </td>
+                                                    <td class="s-d departure">
+                                                        <div class="am"><span class="pull-right"><small>23</small></span></div>
+                                                        <div class="pm selected"><small><span class="euro">&euro;</span> 200</small></div>
+                                                    </td>
+                                                    <td class="r-a">
+                                                        <div class="am"><span class="pull-right"><small>24</small></span></div>
+                                                        <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                                    </td>
+                                                    <td class="r-a">
+                                                        <div class="am"><span class="pull-right"><small>25</small></span></div>
+                                                        <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                 <td class="r-a">
                                                     <div class="am"><span class="pull-right"><small>26</small></span></div>
                                                     <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
@@ -164,7 +174,7 @@
                                                     <div class="am"><span class="pull-right"><small>31</small></span></div>
                                                     <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
                                                 </td>
-                                            </tr>
+                                            </tr>-->
                                         </table>
                                     </div>
                                     <div class="col-md-6">
