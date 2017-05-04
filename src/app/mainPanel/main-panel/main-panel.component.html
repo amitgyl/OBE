@@ -50,7 +50,7 @@
                         <tr *ngFor="let days of arrWeeksThisMonth;">
                             <td class="disabled" [ngClass]="applyClass(a)" *ngFor="let a of days">
                                 <div class="am"><span class="pull-right"><small>{{a.day}}</small></span></div>
-                                <div class="pm" *ngIf="a.availability"><small><span class="euro">&euro;</span> {{a.rate}}</small></div>
+                                <div class="pm" *ngIf="a.availability"><small *ngIf="!a.disabled"><span class="euro" >&euro;</span> {{a.rate}}</small></div>
                             </td>
                         </tr>
                         <!--end of loop-->
@@ -103,6 +103,6 @@
 
     <!--select rooms button-->
     <div class="row">
-        <div class="check-btn"><button class="blue-btn"> Select Rooms <span class="fontA">&#xf054;</span> </button></div>
+        <div class="check-btn" ><button class="blue-btn" (click)="showSpecificMonth()"> Select Rooms <span class="fontA">&#xf054;</span> </button></div>
     </div>
 </div>

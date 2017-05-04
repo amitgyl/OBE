@@ -11,7 +11,6 @@ export class MainPanelComponent implements OnInit {
   departureDate: any;
   numberOfNights: any;
   arrNightStay: any[]
-  monthNumber: any;
   month1Number: any;
   month2Number: any;
   month1: string;
@@ -29,14 +28,15 @@ export class MainPanelComponent implements OnInit {
    const isStay = a.isStaying 
    const isArrive = a.isArrivalDate 
    const isDepart =  a.isDeparture
+   const isDisabled =  a.disabled
    const isNotAvailable = (a.availability < 1)    
    return {
-     's-d': (isStay || isArrive || isDepart), 
-     'arrival': isArrive, 
-     'departure': isDepart, 
-     'not-available': isNotAvailable, 
-     'n-a': isNotAvailable,
-     'r-a': !(isStay || isArrive || isDepart) && a.day
+     's-d': ((isStay || isArrive || isDepart) && !isDisabled), 
+     'arrival': (isArrive && !isDisabled), 
+     'departure': (isDepart && !isDisabled), 
+     'not-available': (isNotAvailable && !isDisabled), 
+     'n-a': (isNotAvailable && !isDisabled), 
+     'r-a': ((!(isStay || isArrive || isDepart) && a.day) && !isDisabled)
     }
   }
 
@@ -46,39 +46,48 @@ export class MainPanelComponent implements OnInit {
 
   ngOnInit() {
     this.setStayNights()
-    this.setCalendar()
-    this.setMonth()
+      
   }
 
   setStayNights() {
     this.availabilty = this.roomsAvailable.getAvailibility(this.arrivalDate, this.departureDate);
-    this.arrivalDate = this.stringToDate("5/25/2017", "mm/dd/yyyy", "/")
-    this.departureDate = this.stringToDate("5/30/2017", "mm/dd/yyyy", "/")
+    if (!this.arrivalDate){
+      this.arrivalDate = this.stringToDate("5/25/2017", "mm/dd/yyyy", "/")
+    }    
+    if (!this.departureDate){
+      this.departureDate = this.stringToDate("5/30/2017", "mm/dd/yyyy", "/")
+    }  
     this.numberOfNights = (this.departureDate - this.arrivalDate) / (1000 * 60 * 60 * 24)
     this.arrNightStay = new Array()
     for (var i = 0; i < this.numberOfNights - 1; i++) {
       this.arrNightStay[i] = new Date(this.arrivalDate.getTime() + ((i + 1) * (86400000)))
     }
+    this.setMonth()  
   }
 
-  setCalendar() {
-    var d = new Date()
+  setCalendar(month1Number,month2Number) {
     this.arrThisMonth = new Array()
-    this.arrNextMonth = new Array()
-    this.month1Number = d.getMonth()
-    this.month2Number = this.month1Number + 1
+    this.arrNextMonth = new Array()    
+
     for (var i = 0; i < this.availabilty.availability.availabilityItem.length; i++) {
-      if (this.month1Number == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getMonth()) {
+      if (
+          month1Number == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getMonth()
+          && 
+          this.year1 == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getFullYear()
+         ) {
         this.arrThisMonth.push(this.availabilty.availability.availabilityItem[i])
       }
-      if (this.month2Number == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getMonth()) {
+      if (
+          month2Number == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getMonth()
+          &&
+          this.year2 == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getFullYear()          
+         ) {
         this.arrNextMonth.push(this.availabilty.availability.availabilityItem[i])
       }
     }
     
     this.arrWeeksThisMonth = this.fillMonth(this.arrThisMonth,this.arrWeeksThisMonth)
-    this.arrWeeksNextMonth = this.fillMonth(this.arrNextMonth,this.arrWeeksNextMonth)
-    
+    this.arrWeeksNextMonth = this.fillMonth(this.arrNextMonth,this.arrWeeksNextMonth)    
 
   }
 
@@ -105,6 +114,10 @@ export class MainPanelComponent implements OnInit {
             if (arrCalMonth[dayNummer1].availability<1){
               arrCalMonth[dayNummer1-1].closedForDeparture = true                    
             }
+          }
+          var d = new Date()
+          if (this.stringToDate(arrCalMonth[dayNummer1].date, "mm/dd/yyyy", "/").getTime() < d.getTime()) {
+              arrCalMonth[dayNummer1].disabled = true
           }
           for (var k = 0; k < this.arrNightStay.length; k++) {
             if (this.arrNightStay[k].getTime() == this.stringToDate(arrCalMonth[dayNummer1].date, "mm/dd/yyyy", "/").getTime()) {
@@ -141,28 +154,39 @@ export class MainPanelComponent implements OnInit {
     this.month[11] = "December";
     this.month[12] = "January";
 
-    if (this.monthNumber == undefined) {
+    if (this.month1Number == undefined) {
       var d = new Date();
-      this.monthNumber = d.getMonth();
+      this.month1Number = d.getMonth();
       this.year1 = d.getFullYear();
     }
-    this.month1 = this.month[this.monthNumber];
-    this.month2 = this.month[this.monthNumber + 1];
-    if (this.monthNumber == 11) {
-      this.year2 = this.year1 + 1;
+    this.month1 = this.month[this.month1Number];
+    
+    if (this.month1Number == 11) {
+      this.year2 = this.year1 + 1
+      this.month2Number = 0
     }
     else {
       this.year2 = this.year1;
+      this.month2Number = this.month1Number + 1
     }
-  }
+    this.month2 = this.month[this.month2Number];
+    this.setCalendar(this.month1Number, this.month2Number)
 
+  }
+  showSpecificMonth(){
+    var selectedDateFromLeftPanel = "8/26/2017"
+    this.arrivalDate =  this.stringToDate(selectedDateFromLeftPanel, "mm/dd/yyyy", "/")
+    this.departureDate = new Date(this.arrivalDate.getTime() + (86400000))          
+    this.month1Number = this.stringToDate(selectedDateFromLeftPanel, "mm/dd/yyyy", "/").getMonth()
+    this.setStayNights();
+  }
   showNextMonth() {
-    if (this.monthNumber == 11) {
-      this.monthNumber = 0;
+    if (this.month1Number == 11) {
+      this.month1Number = 0;
       this.year1++;
     }
     else {
-      this.monthNumber++;
+      this.month1Number++;
     }
     this.setMonth();
   }
@@ -171,16 +195,16 @@ export class MainPanelComponent implements OnInit {
     var d = new Date();
 
 
-    if (this.monthNumber <= d.getMonth() && this.year1 <= d.getFullYear()) {
+    if (this.month1Number <= d.getMonth() && this.year1 <= d.getFullYear()) {
 
     }
     else {
-      if (this.monthNumber == 0) {
-        this.monthNumber = 11;
+      if (this.month1Number == 0) {
+        this.month1Number = 11;
         this.year1--;
       }
       else {
-        this.monthNumber--;
+        this.month1Number--;
       }
       this.setMonth();
     }
