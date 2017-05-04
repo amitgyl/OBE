@@ -22,22 +22,25 @@ export class MainPanelComponent implements OnInit {
   month: string[];
   arrDays: any[];
   arrWeeks: any[];
-  arrThisMonth: any[];
-  arrNextMonth: any[];
+  arrThisMonth: any[];//array storing info about current month
+  arrNextMonth: any[];//array storing info about next month
   arrAvailabilty: any[];
 
-  getAvailabilityClass(a){
+  applyClass(a){
    const isStay = a.isStaying 
    const isArrive = a.isArrivalDate 
    const isDepart =  a.isDeparture
    const isNotAvailable = (a.availability < 1)
+    
    //return {'s-d': a.isStaying === true}
    return {
      's-d': (isStay || isArrive || isDepart), 
      'arrival': isArrive, 
      'departure': isDepart, 
      'not-available': isNotAvailable, 
-     'n-a': isNotAvailable}
+     'n-a': isNotAvailable,
+     'r-a': !(isStay || isArrive || isDepart) && a.day
+    }
   }
 
   constructor(private roomsAvailable: RoomsAvailableService) {
@@ -80,13 +83,15 @@ export class MainPanelComponent implements OnInit {
     var dayNummer = 0
     var dayNummer1 = 0
     //dayNummer is for the td and dayNummer1 is for index of element in availbilty array
-    this.arrWeeks = new Array(this.arrDays);
+    //this.arrWeeks = new Array(this.arrDays);
+    this.arrWeeks = new Array();
 
     for (var i = 1; i < 7; i++) {
       this.arrDays = new Array();
       for (var j = 1; j < 8; j++) {
         
         if ((dayNummer1<this.arrThisMonth.length) && (dayNummer%7  == this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getDay()) ){          
+          var nummsasj = this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getDay() 
           this.arrThisMonth[dayNummer1].day = this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getDate()
           
           if (this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getTime() == this.arrivalDate.getTime()){
@@ -105,16 +110,17 @@ export class MainPanelComponent implements OnInit {
             if (this.arrNightStay[k].getTime() == this.stringToDate(this.arrThisMonth[dayNummer1].date, "mm/dd/yyyy", "/").getTime()) {
               // console.log(this.stringToDate(this.arrThisMonth[dayNummer1].date, "mm/dd/yyyy", "/"))
               this.arrThisMonth[dayNummer1].isStaying = true
-            }
-           
+            }           
           }          
+          //this.arrDays.splice(j, 0, this.arrThisMonth[dayNummer1]);
           this.arrDays.push(this.arrThisMonth[dayNummer1])
           dayNummer1++
 
         } 
 
         else{
-          this.arrDays.push()
+          var x = new Array()
+          this.arrDays.push(x)
         }
                 
         dayNummer++
