@@ -6,7 +6,6 @@ import { RoomsAvailableService } from '../../shared/rooms-available.service';
   styleUrls: ['./main-panel.component.css']
 })
 export class MainPanelComponent implements OnInit {
-  txtSelectRooms = "Select Rooms";
   availabilty: any;
   arrivalDate: any;
   departureDate: any;
@@ -20,8 +19,8 @@ export class MainPanelComponent implements OnInit {
   year1: any;
   year2: any;
   month: string[];
-  arrDays: any[];
-  arrWeeks: any[];
+  arrWeeksThisMonth: any[];
+  arrWeeksNextMonth: any[];
   arrThisMonth: any[];//array storing info about current month
   arrNextMonth: any[];//array storing info about next month
   arrAvailabilty: any[];
@@ -30,9 +29,7 @@ export class MainPanelComponent implements OnInit {
    const isStay = a.isStaying 
    const isArrive = a.isArrivalDate 
    const isDepart =  a.isDeparture
-   const isNotAvailable = (a.availability < 1)
-    
-   //return {'s-d': a.isStaying === true}
+   const isNotAvailable = (a.availability < 1)    
    return {
      's-d': (isStay || isArrive || isDepart), 
      'arrival': isArrive, 
@@ -62,7 +59,6 @@ export class MainPanelComponent implements OnInit {
     for (var i = 0; i < this.numberOfNights - 1; i++) {
       this.arrNightStay[i] = new Date(this.arrivalDate.getTime() + ((i + 1) * (86400000)))
     }
-    // console.log(this.arrNightStay)
   }
 
   setCalendar() {
@@ -80,70 +76,54 @@ export class MainPanelComponent implements OnInit {
       }
     }
     
+    this.arrWeeksThisMonth = this.fillMonth(this.arrThisMonth,this.arrWeeksThisMonth)
+    this.arrWeeksNextMonth = this.fillMonth(this.arrNextMonth,this.arrWeeksNextMonth)
+    
+
+  }
+
+  fillMonth(arrCalMonth,arWeeks){
     var dayNummer = 0
     var dayNummer1 = 0
     //dayNummer is for the td and dayNummer1 is for index of element in availbilty array
-    //this.arrWeeks = new Array(this.arrDays);
-    this.arrWeeks = new Array();
+    arWeeks = new Array();
 
     for (var i = 1; i < 7; i++) {
-      this.arrDays = new Array();
-      for (var j = 1; j < 8; j++) {
-        
-        if ((dayNummer1<this.arrThisMonth.length) && (dayNummer%7  == this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getDay()) ){          
-          var nummsasj = this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getDay() 
-          this.arrThisMonth[dayNummer1].day = this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getDate()
+      var arDays = new Array();
+      for (var j = 1; j < 8; j++) {       
+        if ((dayNummer1<arrCalMonth.length) && (dayNummer%7 == this.stringToDate(arrCalMonth[dayNummer1].date,"mm/dd/yyyy","/").getDay()) ){          
+          arrCalMonth[dayNummer1].day = this.stringToDate(arrCalMonth[dayNummer1].date,"mm/dd/yyyy","/").getDate()
           
-          if (this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getTime() == this.arrivalDate.getTime()){
-            this.arrThisMonth[dayNummer1].isArrivalDate = true
+          if (this.stringToDate(arrCalMonth[dayNummer1].date,"mm/dd/yyyy","/").getTime() == this.arrivalDate.getTime()){
+            arrCalMonth[dayNummer1].isArrivalDate = true
           }
           
-          if (this.stringToDate(this.arrThisMonth[dayNummer1].date,"mm/dd/yyyy","/").getTime() == this.departureDate.getTime()){
-            this.arrThisMonth[dayNummer1].isDeparture = true
+          if (this.stringToDate(arrCalMonth[dayNummer1].date,"mm/dd/yyyy","/").getTime() == this.departureDate.getTime()){
+            arrCalMonth[dayNummer1].isDeparture = true
           }
           if (dayNummer1>0){
-            if (this.arrThisMonth[dayNummer1].availability<1){
-              this.arrThisMonth[dayNummer1-1].closedForDeparture = true                    
+            if (arrCalMonth[dayNummer1].availability<1){
+              arrCalMonth[dayNummer1-1].closedForDeparture = true                    
             }
           }
           for (var k = 0; k < this.arrNightStay.length; k++) {
-            if (this.arrNightStay[k].getTime() == this.stringToDate(this.arrThisMonth[dayNummer1].date, "mm/dd/yyyy", "/").getTime()) {
-              // console.log(this.stringToDate(this.arrThisMonth[dayNummer1].date, "mm/dd/yyyy", "/"))
-              this.arrThisMonth[dayNummer1].isStaying = true
+            if (this.arrNightStay[k].getTime() == this.stringToDate(arrCalMonth[dayNummer1].date, "mm/dd/yyyy", "/").getTime()) {
+              arrCalMonth[dayNummer1].isStaying = true
             }           
           }          
-          //this.arrDays.splice(j, 0, this.arrThisMonth[dayNummer1]);
-          this.arrDays.push(this.arrThisMonth[dayNummer1])
+          arDays.push(arrCalMonth[dayNummer1])
           dayNummer1++
-
         } 
-
         else{
           var x = new Array()
-          this.arrDays.push(x)
-        }
-                
+          arDays.push(x)
+        }                
         dayNummer++
-
       }
-      // console.log(this.arrDays)
-      this.arrWeeks.push(this.arrDays)
-
-    }
-    
-    console.log(this.arrWeeks)
+      arWeeks.push(arDays)
+    }    
+    return arWeeks
   }
-
-  // setCal(ar1, ar2) {
-  //   var date = 1
-  //   console.log(ar1)
-  //   for (var i = 0; i < ar1.length; i++) {
-  //     for (var j = 0; j < ar2.length; j++) {
-  //       ar2[i] = date
-  //       date++
-  //     }
-  //   }
-  // }
 
   setMonth() {
     this.month = new Array();
