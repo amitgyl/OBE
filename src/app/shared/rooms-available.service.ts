@@ -25,12 +25,12 @@ export class RoomsAvailableService {
   }
 }
 const AVAILABILITY = {
-  "availability":{
-    "availabilityItem":[
+  "availability": {
+    "availabilityItem": [
       {
         "date": "5/1/2017",
-        "availability": 5,
-        "max guests": 4,
+        "availability": 0,
+        "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
         "closedOnArrival": false,
@@ -40,12 +40,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
-      },{
+        "stopSell": false,
+        "lengthOfStayTrue": false
+      },
+      {
         "date": "5/2/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -54,13 +56,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/3/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -69,26 +72,28 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/4/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
-        "closedOnDeparture": false,
+        "closedOnDeparture": true,
         "lastAvailabilityUpdate": "2017-03-19T17:57:33+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/5/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -99,13 +104,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/6/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -114,28 +120,30 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/7/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
-        "closedOnArrival": false,
+        "closedOnArrival": true,
         "closedOnDeparture": false,
         "lastAvailabilityUpdate": "2017-03-19T17:57:33+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/8/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -144,13 +152,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/9/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -159,13 +168,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/10/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -174,28 +184,30 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/11/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
-        "closedOnArrival": false,
-        "closedOnDeparture": false,
+        "closedOnArrival": true,
+        "closedOnDeparture": true,
         "lastAvailabilityUpdate": "2017-03-19T17:57:33+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/12/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -204,13 +216,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/13/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -219,13 +232,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/14/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -234,28 +248,30 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/15/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
-        "closedOnArrival": false,
+        "closedOnArrival": true,
         "closedOnDeparture": false,
         "lastAvailabilityUpdate": "2017-03-19T17:57:33+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/16/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -264,11 +280,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/17/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -279,13 +296,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/18/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -294,28 +312,30 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/19/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
-        "closedOnArrival": false,
-        "closedOnDeparture": false,
+        "closedOnArrival": true,
+        "closedOnDeparture": true,
         "lastAvailabilityUpdate": "2017-03-19T17:57:34+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/20/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -324,28 +344,30 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/21/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
-        "closedOnArrival": false,
+        "closedOnArrival": true,
         "closedOnDeparture": false,
         "lastAvailabilityUpdate": "2017-03-19T17:57:34+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/22/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -354,13 +376,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/23/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -369,28 +392,30 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/24/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
-        "closedOnDeparture": false,
+        "closedOnDeparture": true,
         "lastAvailabilityUpdate": "2017-03-19T17:57:34+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/25/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -399,13 +424,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/26/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -414,13 +440,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/27/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -429,13 +456,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/28/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -444,13 +472,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/29/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -459,26 +488,28 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/30/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
-        "closedOnDeparture": false,
+        "closedOnDeparture": true,
         "lastAvailabilityUpdate": "2017-03-19T17:57:34+00:00",
         "lengthOfStayArrivalDateBased": false,
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "5/31/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -489,13 +520,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/1/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -504,11 +536,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/2/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -519,13 +552,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/3/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -534,13 +568,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/4/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -549,13 +584,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/5/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -564,11 +600,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/6/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -579,13 +616,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/7/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -594,13 +632,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/8/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -609,13 +648,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/9/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -624,13 +664,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/10/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -639,13 +680,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/11/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -654,13 +696,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/12/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -669,13 +712,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/13/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -684,13 +728,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/14/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -699,13 +744,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/15/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -714,11 +760,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/16/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -729,13 +776,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/17/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -744,11 +792,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/18/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -759,13 +808,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/19/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -774,13 +824,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/20/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -789,13 +840,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/21/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -804,11 +856,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/22/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -819,13 +872,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/23/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -834,13 +888,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/24/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -849,13 +904,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/25/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -864,13 +920,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/26/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -879,13 +936,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/27/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -894,13 +952,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/28/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -909,13 +968,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/29/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -924,13 +984,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "6/30/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -939,13 +1000,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/1/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -954,11 +1016,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/2/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -969,13 +1032,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/3/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -984,11 +1048,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/4/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -999,13 +1064,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/5/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1014,13 +1080,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/6/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1029,13 +1096,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/7/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1044,11 +1112,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/8/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1059,13 +1128,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/9/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1074,13 +1144,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/10/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1089,13 +1160,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/11/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1104,13 +1176,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/12/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1119,13 +1192,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/13/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1134,13 +1208,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/14/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1149,13 +1224,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/15/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1164,13 +1240,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/16/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1179,13 +1256,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/17/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1194,11 +1272,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/18/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1209,13 +1288,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/19/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1224,11 +1304,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/20/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1239,13 +1320,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/21/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1254,13 +1336,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/22/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1269,13 +1352,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/23/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1284,11 +1368,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/24/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1299,13 +1384,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/25/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1314,13 +1400,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/26/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1329,13 +1416,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/27/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1344,13 +1432,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/28/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1359,13 +1448,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/29/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1374,13 +1464,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/30/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1389,13 +1480,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "7/31/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1404,13 +1496,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/1/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1419,13 +1512,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/2/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1434,11 +1528,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/3/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1449,13 +1544,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/4/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1464,11 +1560,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/5/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1479,13 +1576,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/6/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1494,13 +1592,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/7/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1509,13 +1608,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/8/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1524,11 +1624,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/9/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1539,13 +1640,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/10/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1554,13 +1656,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/11/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1569,13 +1672,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/12/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1584,13 +1688,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/13/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1599,13 +1704,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/14/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1614,13 +1720,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/15/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1629,13 +1736,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/16/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1644,13 +1752,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/17/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1659,13 +1768,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/18/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1674,11 +1784,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/19/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1689,13 +1800,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/20/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1704,11 +1816,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/21/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1719,13 +1832,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/22/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1734,13 +1848,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/23/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1749,13 +1864,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/24/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1764,11 +1880,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/25/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1779,13 +1896,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/26/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1794,13 +1912,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/27/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1809,13 +1928,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/28/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1824,13 +1944,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/29/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1839,13 +1960,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/30/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1854,13 +1976,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "8/31/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1869,13 +1992,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/1/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1884,13 +2008,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/2/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1899,13 +2024,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/3/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1914,11 +2040,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/4/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1929,13 +2056,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/5/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1944,11 +2072,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/6/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -1959,13 +2088,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/7/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1974,13 +2104,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/8/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -1989,13 +2120,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/9/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2004,11 +2136,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/10/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2019,13 +2152,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/11/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2034,13 +2168,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/12/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2049,13 +2184,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/13/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2064,13 +2200,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/14/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2079,13 +2216,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/15/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2094,13 +2232,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/16/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2109,13 +2248,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/17/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2124,13 +2264,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/18/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2139,13 +2280,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/19/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2154,11 +2296,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/20/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2169,13 +2312,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/21/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2184,11 +2328,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/22/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2199,13 +2344,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/23/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2214,13 +2360,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/24/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2229,13 +2376,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/25/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2244,11 +2392,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/26/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2259,13 +2408,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/27/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2274,13 +2424,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/28/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2289,13 +2440,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/29/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2304,13 +2456,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "9/30/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2319,13 +2472,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/1/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2334,13 +2488,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/2/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2349,13 +2504,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/3/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2364,13 +2520,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/4/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2379,13 +2536,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/5/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2394,11 +2552,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/6/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2409,13 +2568,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/7/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2424,11 +2584,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/8/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2439,13 +2600,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/9/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2454,13 +2616,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/10/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2469,13 +2632,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/11/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2484,11 +2648,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/12/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2499,13 +2664,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/13/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2514,13 +2680,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/14/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2529,13 +2696,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/15/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2544,13 +2712,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/16/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2559,13 +2728,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/17/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2574,13 +2744,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/18/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2589,13 +2760,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/19/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2604,13 +2776,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/20/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2619,13 +2792,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/21/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2634,11 +2808,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/22/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2649,13 +2824,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/23/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2664,11 +2840,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/24/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2679,13 +2856,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/25/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2694,13 +2872,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/26/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2709,13 +2888,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/27/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2724,11 +2904,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/28/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2739,13 +2920,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/29/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2754,13 +2936,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/30/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2769,13 +2952,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "10/31/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2784,13 +2968,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/1/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2799,13 +2984,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/2/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2814,13 +3000,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/3/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2829,13 +3016,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/4/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2844,13 +3032,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/5/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2859,13 +3048,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/6/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2874,11 +3064,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/7/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2889,13 +3080,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/8/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2904,11 +3096,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/9/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2919,13 +3112,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/10/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2934,13 +3128,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/11/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2949,13 +3144,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/12/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2964,11 +3160,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/13/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -2979,13 +3176,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/14/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -2994,13 +3192,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/15/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3009,13 +3208,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/16/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3024,13 +3224,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/17/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3039,13 +3240,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/18/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3054,13 +3256,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/19/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3069,13 +3272,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/20/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3084,13 +3288,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/21/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3099,13 +3304,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/22/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3114,11 +3320,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/23/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3129,13 +3336,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/24/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3144,11 +3352,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/25/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3159,13 +3368,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/26/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3174,13 +3384,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/27/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3189,13 +3400,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/28/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3204,11 +3416,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/29/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3219,13 +3432,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "11/30/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3234,13 +3448,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/1/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3249,13 +3464,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/2/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3264,13 +3480,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/3/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3279,13 +3496,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/4/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3294,13 +3512,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/5/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3309,13 +3528,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/6/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3324,13 +3544,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/7/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3339,13 +3560,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/8/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3354,11 +3576,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/9/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3369,13 +3592,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/10/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3384,11 +3608,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/11/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3399,13 +3624,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/12/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3414,13 +3640,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/13/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3429,13 +3656,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/14/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 5,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3444,11 +3672,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/15/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3459,13 +3688,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/16/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 4,
-        "rate": 140,
+        "rate": 133,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3474,13 +3704,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/17/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 5,
-        "rate": 140,
+        "rate": 130,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3489,13 +3720,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/18/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 3,
-        "rate": 140,
+        "rate": 127,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3504,13 +3736,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/19/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 4,
-        "rate": 140,
+        "rate": 124,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3519,13 +3752,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/20/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 5,
-        "rate": 140,
+        "rate": 121,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3534,13 +3768,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/21/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 3,
-        "rate": 140,
+        "rate": 118,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3549,13 +3784,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/22/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 4,
-        "rate": 140,
+        "rate": 115,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3564,13 +3800,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/23/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 5,
-        "rate": 140,
+        "rate": 112,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3579,13 +3816,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/24/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 109,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3594,11 +3832,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/25/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3609,13 +3848,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/26/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3624,11 +3864,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/27/2017",
-        "availability": 5,
+        "availability": 0,
         "max guests": 3,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3639,13 +3880,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/28/2017",
-        "availability": 5,
+        "availability": 1,
         "max guests": 4,
-        "rate": 140,
+        "rate": 150,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3654,13 +3896,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/29/2017",
-        "availability": 5,
+        "availability": 2,
         "max guests": 3,
-        "rate": 140,
+        "rate": 160,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3669,13 +3912,14 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/30/2017",
-        "availability": 5,
+        "availability": 3,
         "max guests": 4,
-        "rate": 140,
+        "rate": 120,
         "currencyCode": "EUR",
         "closedOnArrival": false,
         "closedOnDeparture": false,
@@ -3684,11 +3928,12 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       },
       {
         "date": "12/31/2017",
-        "availability": 5,
+        "availability": 4,
         "max guests": 5,
         "rate": 140,
         "currencyCode": "EUR",
@@ -3699,7 +3944,8 @@ const AVAILABILITY = {
         "maxDays": 0,
         "minDays": 0,
         "singleUsePrice": 0,
-        "stopSell": false
+        "stopSell": false,
+        "lengthOfStayTrue": false
       }
     ]
   }

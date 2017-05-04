@@ -47,10 +47,11 @@
                                                 </td>
                                             </tr>
                                             <!--start of loop-->
-                                            <tr *ngFor="let a of arrWeeks;">                                        
-                                                <td class="r-a" *ngFor="let c of a;">
-                                                    <div class="am"><span class="pull-right"><small>{{c}}</small></span></div>
-                                                    <div class="pm"><small><span class="euro">&euro;</span> 200</small></div>
+                                            <tr class="r-a" *ngFor="let days of arrWeeks;">                                        
+                                                <!--<td [ngClass]="{'s-d': a.isStaying === true, 's-d': a.isArrivalDate === true }"  *ngFor="let a of days;">-->
+                                                <td [ngClass]="getAvailabilityClass(a)"  *ngFor="let a of days;">
+                                                    <div class="am"><span class="pull-right"><small>{{a.day}}</small></span></div>
+                                                    <div class="pm" *ngIf="a.availability"><small><span class="euro">&euro;</span> {{a.rate}}</small></div>
                                                 </td>
                                             </tr>                                                                                                                                    
                                             <!--end of loop-->
