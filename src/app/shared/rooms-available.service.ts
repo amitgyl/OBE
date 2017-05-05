@@ -430,7 +430,7 @@ const AVAILABILITY_LONG = {
       },
       {
         "date": "5/26/2017",
-        "availability": 1,
+        "availability": 0,
         "max guests": 4,
         "rate": 121,
         "currencyCode": "EUR",

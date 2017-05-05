@@ -24,6 +24,59 @@ export class MainPanelComponent implements OnInit {
   arrAvailabilty: any[];
 
   applyClass(a) {
+    const isStaying = a.isStaying
+    const isArrive = a.isArrivalDate
+    const isDepart = a.isDeparture
+    const isDisabled = a.disabled
+    const isNotAvailable = (a.availability < 1)
+    const isNotAvailableForArrival = true
+    const isNotAvailableForDeparture = true
+    const isHalfNotAvailableAndHalfStayin = true
+    const isHalfStayinHalfAndNotAvailable = true
+
+    if (isStaying){
+      return 's-d'
+    }
+    if (isArrive){
+      return 's-d arrival'
+    }
+    if (isDepart){
+      return 's-d departure'
+    }
+    if (isDisabled){
+      return 'disabled'
+    }
+    if (isNotAvailable){
+      return "not-available n-a"
+    }
+    if (isNotAvailableForArrival){
+      return "not-available n-a arrival"
+    }
+    if (isNotAvailableForDeparture){
+      return "not-available n-a departure"
+    }
+    if (isHalfNotAvailableAndHalfStayin){
+      return "booked-staying"
+    }
+    if (isHalfStayinHalfAndNotAvailable){
+      return "staying-booked"
+    }
+    return 'r-a'  
+     
+    
+
+    // return {
+    //   's-d': ((isStay || isArrive || isDepart) && !isDisabled),
+    //   'arrival':isArrive,// (isArrive && !isDisabled),
+    //   'departure': (isDepart && !isDisabled),
+    //   'not-available': (isNotAvailable && !isDisabled),
+    //   'n-a': (isNotAvailable && !isDisabled),
+    //   'r-a': ((!(isStay || isArrive || isDepart) && a.day) && !isDisabled)
+    // }
+  }
+
+
+  applyClass1(a) {
     const isStay = a.isStaying
     const isArrive = a.isArrivalDate
     const isDepart = a.isDeparture
@@ -132,8 +185,8 @@ export class MainPanelComponent implements OnInit {
 
   fillMonth(arrCalMonth) {
     var dayNummer = 0
-    var dayNummer1 = 0
-    //dayNummer is for the td and dayNummer1 is for index of element in availbilty array
+    var dayInMonth = 0
+    //dayNummer is for the td and dayInMonth is for index of element in availbilty array
     var arWeeks = new Array();
 
     var numberOfWeeks = 7
@@ -152,42 +205,42 @@ export class MainPanelComponent implements OnInit {
     for (var i = 1; i <numberOfWeeks; i++) {
       var arrDays = new Array();
       for (var j = 1; j < 8; j++) {
-        if ((dayNummer1 < arrCalMonth.length) && (dayNummer % 7 == this.stringToDate(arrCalMonth[dayNummer1].date, "mm/dd/yyyy", "/").getDay())) {
-          arrCalMonth[dayNummer1].day = this.stringToDate(arrCalMonth[dayNummer1].date, "mm/dd/yyyy", "/").getDate()
-
+        if ((dayInMonth < arrCalMonth.length) && (dayNummer % 7 == this.stringToDate(arrCalMonth[dayInMonth].date, "mm/dd/yyyy", "/").getDay())) {
           
-          if (arrCalMonth[dayNummer1].date == this.dateToString(this.arrivalDate)) {
-            arrCalMonth[dayNummer1].isArrivalDate = true
+          arrCalMonth[dayInMonth].day = this.stringToDate(arrCalMonth[dayInMonth].date, "mm/dd/yyyy", "/").getDate()
+          
+          if (arrCalMonth[dayInMonth].date == this.dateToString(this.arrivalDate)) {
+            arrCalMonth[dayInMonth].isArrivalDate = true
           }
 
-          else if (arrCalMonth[dayNummer1].date == this.dateToString(this.departureDate)) {         
-            arrCalMonth[dayNummer1].isDeparture = true
+          else if (arrCalMonth[dayInMonth].date == this.dateToString(this.departureDate)) {         
+            arrCalMonth[dayInMonth].isDeparture = true
           }
 
           //logic for applyClass start
 
-          // if (dayNummer1 > 0) {
-          //   if (arrCalMonth[dayNummer1].availability < 1) {
-          //     arrCalMonth[dayNummer1 - 1].closedForDeparture = true
+          // if (dayInMonth > 0) {
+          //   if (arrCalMonth[dayInMonth].availability < 1) {
+          //     arrCalMonth[dayInMonth - 1].closedForDeparture = true
           //   }
           // }
 
           //disable past dates          
           var d = new Date()
-          if (this.stringToDate(arrCalMonth[dayNummer1].date, "mm/dd/yyyy", "/") < this.stringToDate(this.dateToString(d),"mm/dd/yyyy", "/")) {
-            arrCalMonth[dayNummer1].disabled = true
+          if (this.stringToDate(arrCalMonth[dayInMonth].date, "mm/dd/yyyy", "/") < this.stringToDate(this.dateToString(d),"mm/dd/yyyy", "/")) {
+            arrCalMonth[dayInMonth].disabled = true
           }
-          if (arrCalMonth[dayNummer1].date == this.dateToString(this.arrivalDate)) {
+          if (arrCalMonth[dayInMonth].date == this.dateToString(this.arrivalDate)) {
           }
           
           for (var k = 0; k < this.arrNightStay.length; k++) {
-            if (this.dateToString(this.arrNightStay[k]) == arrCalMonth[dayNummer1].date) {
-              arrCalMonth[dayNummer1].isStaying = true
+            if (this.dateToString(this.arrNightStay[k]) == arrCalMonth[dayInMonth].date) {
+              arrCalMonth[dayInMonth].isStaying = true
             }
           }
           //logic for applyClass end
-          arrDays.push(arrCalMonth[dayNummer1])
-          dayNummer1++
+          arrDays.push(arrCalMonth[dayInMonth])
+          dayInMonth++
         }
         else {
           var x = new Array()
@@ -197,7 +250,8 @@ export class MainPanelComponent implements OnInit {
       }
       arWeeks.push(arrDays)
     }
-    return arWeeks
+    console.log(arWeeks)
+    return arWeeks    
   }
 
   
