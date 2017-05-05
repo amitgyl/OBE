@@ -20,7 +20,7 @@
                     <table class="calendar-1 table table responsive">
                         <thead>
                             <th colspan="7"><span class="pull-left fontA" (click)="showPreviousMonth()">&#xf137;</span><span class="show-991 pull-right fontA">&#xf138;</span>
-                                <div class="text-center">{{month1}} {{year1}}</div>
+                                <div class="text-center">{{month1Name}} {{year1}}</div>
                             </th>
                         </thead>
                         <tr>
@@ -59,8 +59,8 @@
                 <div class="col-md-6">
                     <table class="calendar-2 table table responsive hide-991">
                         <thead>
-                            <th colspan="7"><span class="pull-right fontA" (click)="showNextMonth()">&#xf138; </span>
-                                <div class="text-center">{{month2}} {{year2}}</div>
+                            <th colspan="7"><span class="pull-right fontA" (click)="showNextMonth()" style="cursor:default">&#xf138; </span>
+                                <div class="text-center">{{month2Name}} {{year2}}</div>
                             </th>
                         </thead>
                         <tr>

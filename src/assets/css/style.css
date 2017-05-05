@@ -261,6 +261,7 @@ a {
 }
 .display-calendar .table .fontA {
     color: #c1c1c1;
+    cursor:default
 }
 .display-calendar .table td {
     border-right: 2px solid #ffffff;
