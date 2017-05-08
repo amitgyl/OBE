@@ -19,20 +19,21 @@ export class MainPanelComponent implements OnInit {
   year2: any;
   arrWeeksThisMonth: any[];
   arrWeeksNextMonth: any[];
-  arrThisMonth: any[];//array storing info about current month
-  arrNextMonth: any[];//array storing info about next month
-  arrAvailabilty: any[];
+  currency:any;
+  lastDayOfPreviousMonthUnavailable:any;
 
   applyClass(a) {
-    const isStaying = a.isStaying
+    const isDepart = a.isDeparture &&  (a.availability>0)
+    const isStaying = a.isStaying && (a.availability>0) && !a.notAvailableForDeparture
     const isArrive = a.isArrivalDate
-    const isDepart = a.isDeparture
-    const isDisabled = a.disabled
-    const isNotAvailable = (a.availability < 1)
-    const isNotAvailableForArrival = true
-    const isNotAvailableForDeparture = true
-    const isHalfNotAvailableAndHalfStayin = true
-    const isHalfStayinHalfAndNotAvailable = true
+    const isDisabled = a.disabled || (a.availability == undefined)
+    const isNotAvailable = (a.availability < 1) && a.notAvailableForDeparture
+    const isNotAvailableForArrival = (a.availability < 1) && !a.isStaying && !a.isDeparture
+    const isNotAvailableForDeparture = a.notAvailableForDeparture && !a.isStaying
+    const isHalfNotAvailableAndHalfStayin = a.notAvailableForDeparture && a.isStaying
+    const isHalfStayinHalfAndNotAvailable = (a.isStaying && (a.availability < 1) ) || (a.isDeparture)    
+
+    //later we can move the above code directly into the if statement
 
     if (isStaying){
       return 's-d'
@@ -62,34 +63,6 @@ export class MainPanelComponent implements OnInit {
       return "staying-booked"
     }
     return 'r-a'  
-     
-    
-
-    // return {
-    //   's-d': ((isStay || isArrive || isDepart) && !isDisabled),
-    //   'arrival':isArrive,// (isArrive && !isDisabled),
-    //   'departure': (isDepart && !isDisabled),
-    //   'not-available': (isNotAvailable && !isDisabled),
-    //   'n-a': (isNotAvailable && !isDisabled),
-    //   'r-a': ((!(isStay || isArrive || isDepart) && a.day) && !isDisabled)
-    // }
-  }
-
-
-  applyClass1(a) {
-    const isStay = a.isStaying
-    const isArrive = a.isArrivalDate
-    const isDepart = a.isDeparture
-    const isDisabled = a.disabled
-    const isNotAvailable = (a.availability < 1)
-    return {
-      's-d': ((isStay || isArrive || isDepart) && !isDisabled),
-      'arrival': (isArrive && !isDisabled),
-      'departure': (isDepart && !isDisabled),
-      'not-available': (isNotAvailable && !isDisabled),
-      'n-a': (isNotAvailable && !isDisabled),
-      'r-a': ((!(isStay || isArrive || isDepart) && a.day) && !isDisabled)
-    }
   }
 
   constructor(private roomsAvailable: RoomsAvailableService) {
@@ -97,6 +70,7 @@ export class MainPanelComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.currency = "€"
     this.setStayNights()
     this.setMonthNameYear()
   }
@@ -158,8 +132,8 @@ export class MainPanelComponent implements OnInit {
   }
 
   setCalendar(month1Number, month2Number) {
-    this.arrThisMonth = new Array()
-    this.arrNextMonth = new Array()
+    var arrThisMonth = new Array()
+    var arrNextMonth = new Array()
 
     for (var i = 0; i < this.availabilty.availability.availabilityItem.length; i++) {
       if (
@@ -167,19 +141,27 @@ export class MainPanelComponent implements OnInit {
         &&
         this.year1 == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getFullYear()
       ) {
-        this.arrThisMonth.push(this.availabilty.availability.availabilityItem[i])
+        arrThisMonth.push(this.availabilty.availability.availabilityItem[i])
       }
       else if (
         month2Number == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getMonth()
         &&
         this.year2 == this.stringToDate(this.availabilty.availability.availabilityItem[i].date, "mm/dd/yyyy", "/").getFullYear()
       ) {
-        this.arrNextMonth.push(this.availabilty.availability.availabilityItem[i])
+        arrNextMonth.push(this.availabilty.availability.availabilityItem[i])
       }
     }
 
-    this.arrWeeksThisMonth = this.fillMonth(this.arrThisMonth)
-    this.arrWeeksNextMonth = this.fillMonth(this.arrNextMonth)
+    this.arrWeeksThisMonth = this.fillMonth(arrThisMonth)
+    //set the property lastDayOfPreviousMonthUnavailable so that appropriate style can be applied to 1st day of next month
+    if (arrThisMonth[arrThisMonth.length-1].availability<1){
+      this.lastDayOfPreviousMonthUnavailable = true
+    }
+    else{
+      this.lastDayOfPreviousMonthUnavailable = false
+    }
+
+    this.arrWeeksNextMonth = this.fillMonth(arrNextMonth)
 
   }
 
@@ -190,7 +172,7 @@ export class MainPanelComponent implements OnInit {
     var arWeeks = new Array();
 
     var numberOfWeeks = 7
-    console.log(this.stringToDate(arrCalMonth[0].date, "mm/dd/yyyy", "/").getDay())
+    //console.log(this.stringToDate(arrCalMonth[0].date, "mm/dd/yyyy", "/").getDay())
     if(arrCalMonth.length == 31){      
       if (this.stringToDate(arrCalMonth[0].date, "mm/dd/yyyy", "/").getDay()< 5){
         numberOfWeeks = 6
@@ -217,11 +199,22 @@ export class MainPanelComponent implements OnInit {
             arrCalMonth[dayInMonth].isDeparture = true
           }
 
-          //logic for applyClass start
+      //logic for applyClass start
 
-          // if (dayInMonth > 0) {
-          //   if (arrCalMonth[dayInMonth].availability < 1) {
-          //     arrCalMonth[dayInMonth - 1].closedForDeparture = true
+          if (dayInMonth > 0) {
+            if (arrCalMonth[dayInMonth-1].availability < 1) {
+              arrCalMonth[dayInMonth].notAvailableForDeparture = true
+            }
+          }
+          else{
+            if (this.lastDayOfPreviousMonthUnavailable){
+                 arrCalMonth[dayInMonth].notAvailableForDeparture = true
+            }
+          }
+          //disable the first half of day if the last day of previous month was unavailable
+          // if (!this.arrWeeksThisMonth){
+          //   if (this.arrWeeksThisMonth.){
+
           //   }
           // }
 
@@ -230,19 +223,20 @@ export class MainPanelComponent implements OnInit {
           if (this.stringToDate(arrCalMonth[dayInMonth].date, "mm/dd/yyyy", "/") < this.stringToDate(this.dateToString(d),"mm/dd/yyyy", "/")) {
             arrCalMonth[dayInMonth].disabled = true
           }
-          if (arrCalMonth[dayInMonth].date == this.dateToString(this.arrivalDate)) {
-          }
+          
+          // if (arrCalMonth[dayInMonth].date == this.dateToString(this.arrivalDate)) {
+          // }
           
           for (var k = 0; k < this.arrNightStay.length; k++) {
             if (this.dateToString(this.arrNightStay[k]) == arrCalMonth[dayInMonth].date) {
               arrCalMonth[dayInMonth].isStaying = true
             }
           }
-          //logic for applyClass end
+      //logic for applyClass end
           arrDays.push(arrCalMonth[dayInMonth])
           dayInMonth++
         }
-        else {
+        else {//push an empty array
           var x = new Array()
           arrDays.push(x)
         }
@@ -250,10 +244,13 @@ export class MainPanelComponent implements OnInit {
       }
       arWeeks.push(arrDays)
     }
-    console.log(arWeeks)
+    // if (this.arrWeeksThisMonth){
+    //   console.log(this.arrWeeksThisMonth[this.arrWeeksThisMonth.length-1].length)
+    //   console.log(this.arrWeeksThisMonth[4][4])
+    // }
+    //  console.log("mk")
     return arWeeks    
   }
-
   
   showSpecificMonth() {
     var selectedDateFromLeftPanel = "8/26/2017"
@@ -277,8 +274,6 @@ export class MainPanelComponent implements OnInit {
 
   showPreviousMonth() {
     var d = new Date();
-
-
     if (this.month1Number <= d.getMonth() && this.year1 <= d.getFullYear()) {
 
     }
@@ -293,7 +288,6 @@ export class MainPanelComponent implements OnInit {
       this.setMonthNameYear();
     }
   }
-
 
   stringToDate(_date, _format, _delimiter) {
     var formatLowerCase = _format.toLowerCase();
@@ -311,4 +305,5 @@ export class MainPanelComponent implements OnInit {
   dateToString(dateObj){
     return (1+dateObj.getMonth())+"/"+dateObj.getDate()+"/"+dateObj.getFullYear()
   }
+
 }
